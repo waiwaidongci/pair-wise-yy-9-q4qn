@@ -16,3 +16,6 @@ pnpm-debug.log*
 dist/
 build/
 coverage/
+
+# 运行时数据（首次启动自动生成种子）
+data/glass-plate-recovery*.json
