@@ -1,5 +1,5 @@
 {
-  "items": [
+  "negatives": [
     {
       "code": "CN-001",
       "plateSize": "18x24cm",
@@ -7,8 +7,9 @@
       "exposure": "8分钟",
       "waterSource": "井水过滤",
       "box": "蓝盒A-03",
-      "status": "待入盒",
+      "status": "已交付",
       "defect": "边角显影不均",
+      "deliveredAt": "2026-06-21",
       "logs": [
         {
           "at": "2026-06-20",
@@ -16,21 +17,96 @@
           "note": "阴天补时2分钟"
         },
         {
-          "at": "2026-06-21T03:50:30.042Z",
+          "at": "2026-06-21",
           "step": "入盒",
-          "note": "放入A盒"
-        }
-      ],
-      "steps": [
-        {
-          "at": "2026-06-21T03:50:30.042Z",
-          "step": "入盒",
-          "developStatus": "稳定",
-          "defect": "边角显影不均",
-          "repair": "边角重涂",
           "note": "放入A盒"
         }
       ]
+    },
+    {
+      "code": "CN-002",
+      "plateSize": "13x18cm",
+      "chemicalBatch": "B-0624",
+      "exposure": "6分钟",
+      "waterSource": "井水过滤",
+      "box": "蓝盒A-05",
+      "status": "已交付",
+      "defect": "",
+      "deliveredAt": "2026-06-22",
+      "logs": [
+        {
+          "at": "2026-06-22",
+          "step": "交付",
+          "note": "待拆片回收玻璃板"
+        }
+      ]
     }
-  ]
+  ],
+  "plates": [
+    {
+      "code": "GP-001",
+      "plateSize": "18x24cm",
+      "sourceNegative": "CN-001",
+      "status": "待复洗",
+      "revision": 1,
+      "intake": {
+        "at": "2026-09-20T02:10:00.000Z",
+        "scratch": "边缘一道浅划痕",
+        "emulsion": "无残留",
+        "cleaner": "林阿秀"
+      },
+      "cleanChecks": [],
+      "archive": [],
+      "history": [
+        {
+          "at": "2026-09-20T02:10:00.000Z",
+          "type": "intake",
+          "revision": 1,
+          "detail": "划痕不达标（边缘一道浅划痕）；乳剂残留达标；清洗人已登记",
+          "toStatus": "待复洗"
+        }
+      ]
+    },
+    {
+      "code": "GP-002",
+      "plateSize": "13x18cm",
+      "sourceNegative": "CN-002",
+      "status": "待复认",
+      "revision": 1,
+      "intake": {
+        "at": "2026-09-21T01:30:00.000Z",
+        "scratch": "无",
+        "emulsion": "无",
+        "cleaner": "林阿秀"
+      },
+      "cleanChecks": [
+        {
+          "seq": 1,
+          "at": "2026-09-21T02:00:00.000Z",
+          "confirmer": "周明和",
+          "note": "透光检查无污痕",
+          "revision": 1
+        }
+      ],
+      "archive": [],
+      "history": [
+        {
+          "at": "2026-09-21T01:30:00.000Z",
+          "type": "intake",
+          "revision": 1,
+          "detail": "三项均达标",
+          "toStatus": "待复认"
+        },
+        {
+          "at": "2026-09-21T02:00:00.000Z",
+          "type": "clean",
+          "revision": 1,
+          "seq": 1,
+          "confirmer": "周明和",
+          "note": "透光检查无污痕"
+        }
+      ]
+    }
+  ],
+  "coating": []
 }
